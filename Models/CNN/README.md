@@ -1,1 +1,0 @@
-## Folder to add CNN model trained
