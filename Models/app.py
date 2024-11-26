@@ -52,3 +52,7 @@ def predict(input_data: InputData):
     # Convert prediction to a list for JSON serialization
     prediction_list = prediction[0].tolist()
     return {"prediction": prediction_list}
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app)
