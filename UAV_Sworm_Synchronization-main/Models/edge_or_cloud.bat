@@ -9,12 +9,11 @@ if errorlevel 1 (
     exit /b
 )
 
-:: Get the Wi-Fi state (connected or disconnected)
+
 for /f "tokens=2 delims=:" %%A in ('netsh wlan show interfaces ^| findstr /i "State"') do (
     set "wifiState=%%A"
 )
 
-:: Trim spaces from wifiState variable
 set "wifiState=%wifiState: =%"
 
 :: Evaluate Wi-Fi state
